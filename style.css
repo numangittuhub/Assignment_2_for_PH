@@ -1,0 +1,49 @@
+body{
+    /* background-color: #1E1E1E; */
+}
+header{
+    height: 71px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav ul{
+display: flex;
+gap: 20px;
+}
+nav ul li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 550;
+}
+nav ul li a{
+    text-decoration: none;
+}
+.logo{
+    height: 71px;
+}
+.hero{
+    display: flex;
+    width: 1140px;
+    height: 461px;
+    margin: 269px auto 0;
+}
+.hero_title{
+    font-size: 65px;
+    font-weight: bold;
+}
+.hero_details{
+    height: 299px;
+    width: 570px;
+    align-content: ;
+}
+.banner_pic{
+    width: 570px;
+    height: 355px;
+    margin-bottom: 0px
+}
