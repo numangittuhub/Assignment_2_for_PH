@@ -1,119 +1,107 @@
-
-header{
+/* === Header Section === */
+header {
     height: 71px;
     max-width: 1140px;
     margin: 0 auto;
 }
-header nav{
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-nav ul{
-display: flex;
-gap: 20px;
-padding: 0; /* ডিফল্ট প্যাডিং সরিয়ে দেওয়া হয়েছে */
-margin: 0; /* ডিফল্ট মার্জিন সরিয়ে দেওয়া হয়েছে */
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
-nav ul li{
+nav ul li {
     list-style: none;
     font-size: 18px;
     font-weight: 550;
 }
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color: inherit; /* লিঙ্কগুলির ডিফল্ট নীল রঙ সরাতে */
+    color: inherit;
 }
-span{
+span {
     color: #E95A08;
 }
-.logo{
+.logo {
     height: 71px;
 }
-.hero{
+
+/* === Hero Section === */
+.hero {
     display: flex;
     align-items: center;
     width: 1140px;
     height: 461px;
     margin: 269px auto 0;
-    /* border: 2px solid red; */
 }
-.hero_title{
+.hero_title {
     font-size: 65px;
     font-weight: bold;
 }
-.hero_details{
-    height: 299px;
+.hero_details {
     width: 570px;
     font-size: 22px;
-    /* margin-bottom: -0px; */ /* অপ্রয়োজনীয় */
-    /* padding-bottom: -0px; */ /* অপ্রয়োজনীয় */
 }
-.banner_pic{
+.banner_pic {
     width: 570px;
     height: 355px;
-    /* margin-bottom: 0px */ /* অপ্রয়োজনীয় */
 }
-.banner_pic img { /* hero-flower.png ইমেজকে রেসপনসিভ করার জন্য */
+.banner_pic img {
     width: 100%;
     height: auto;
     display: block;
 }
-.our_plants h2{
+
+/* === Our Plants Section === */
+.our_plants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1140px;
+    margin: auto;
+}
+.our_plants h2 {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
 }
-.plant_des{
+.plant_des {
     font-size: 22px;
     text-align: center;
     margin-top: 10px;
 }
-.our_plants{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 1140px;
-   margin: auto;
-}
-.cards_container{
+.cards_container {
     display: grid;
-    justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     width: 1140px;
-    padding:0 auto;
     margin: 10px auto;
 }
-.card{
-    width: 240px;   
+.card {
+    width: 240px;
     height: 485px;
     text-align: center;
 }
-
-.card img{
-    /* position: relative; */ /* এইখানে position: relative; দরকার নেই */
-    display: block;
+.card img {
     width: 100%;
     height: 240px;
-    object-fit: cover; /* ইমেজ সঠিকভাবে কার্ডে ফিট হবে */
+    object-fit: cover;
+    display: block;
 }
-
-/* এই বন্ধনীটি অতিরিক্ত ছিল, এটি মুছে ফেলা হয়েছে */
-/* } */ 
-
-.card_title{
+.card_title {
     font-size: 22px;
-    font-weight: normal; /* "medium" CSS প্রপার্টি নয়, normal বা 500 ব্যবহার করুন */
+    font-weight: normal;
 }
-.card_price{
+.card_price {
     font-size: 22px;
     font-weight: bold;
-    
-    }
-    .btn{
+}
+.btn {
     width: 100%;
     height: 50px;
     background-color: #E95A08;
@@ -121,172 +109,344 @@ span{
     border: none;
     font-size: 18px;
     font-weight: 550;
-    cursor: pointer; /* বাটন ক্লিকযোগ্য বোঝানোর জন্য */
-    }
-    .plants_lover{
-        width: 1140px;
-        /* height: 597px; */ /* হাইট ফিক্সড না রেখে কন্টেন্টের উপর নির্ভর করতে দেওয়া ভালো */
-        margin: 200px auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start; /* কন্টেন্ট উপরের দিক থেকে শুরু হবে */
-        gap: 50px; /* ছবি এবং লেখার মধ্যে গ্যাপ যোগ করা হয়েছে */
-    }
-    .plants_lover_img {
-        position: relative; /* *** এটিই আপনার প্রধান ভুল ছিল! *** */
-        /* এর ভেতরের অ্যাবসোলিউটলি পজিশনড উপাদানগুলো এর সাপেক্ষে বসবে */
-        width: 540px;
-        /* height: 597px; */ /* হাইট ফিক্সড না রেখে কন্টেন্টের উপর নির্ভর করতে দেওয়া ভালো */
-    }
-
-    .plants_lover_img img:first-child { /* মূল flower-store.png ইমেজ */
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    .badge{
-        position: absolute; /* ব্যাজটিকে তার parent (.plants_lover_img) এর সাপেক্ষে absolute পজিশন করা হয়েছে */
-        top: -100px; /* ছবিটি দেখে মনে হচ্ছে উপরের দিকে কিছুটা উপরে আছে */
-        right: -100px; /* ছবিটি দেখে মনে হচ্ছে ডানদিকে কিছুটা বাইরে আছে */
-        width: 250px; 
-        height: auto; 
-        z-index: 10; 
-        transform: rotate(15deg); 
-    }
-
-
-    .lover_des{
-       
-        width: 540px;
-        
-    }
-    .lover_des h3{
-        font-size: 50px;
-        font-weight: bold;
-    }
-    .lover_list {
-        list-style: disc; 
-        padding-left: 20px;}
-    .lover_list li{
-        margin-bottom: 20px;
-    }
-    .lover_des ul li{
-        font-size: 22px;
-        text-align: justify;
-        color:#00000070;
-    }
-.deals{
-    text-align: center;
+    cursor: pointer;
 }
-.deal_title{
+
+/* === Plants Lover Section === */
+.plants_lover {
+    width: 1140px;
+    margin: 200px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+.plants_lover_img {
+    position: relative;
+    width: 540px;
+}
+.plants_lover_img img:first-child {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.badge {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 250px;
+    height: auto;
+    z-index: 10;
+    transform: rotate(15deg);
+}
+.lover_des {
+    width: 540px;
+}
+.lover_des h3 {
     font-size: 50px;
     font-weight: bold;
 }
-.deal_des{
-font-size: 22px;
-color: #00000070;
+.lover_list {
+    list-style: disc;
+    padding-left: 20px;
 }
-.deal_grid{
+.lover_list li {
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-align: justify;
+    color: #00000070;
+}
+
+/* === Deals Section === */
+.deals {
+    text-align: center;
+}
+
+}
+.deal_title {
+    font-size: 50px;
+    font-weight: bold;
+}
+.deal_des {
+    font-size: 22px;
+    color: #00000070;
+}
+.deal_grid {
     width: 1140px;
     height: 425px;
-    /* border: 1px solid red; */
-    margin:0 auto;
-}
-.deal_item1{
-    background-image:url(./assets/deal-bloom.png) ;
-    width: 367px;
-    height: 201px;
-     display: flex;
-    flex-direction: column;
-    justify-content: center;
-     align-items: center;
-     border-radius: 14px;
-}
- .deal_item2{
-    background-image: url(./assets/deal-ana.png);
-    border-radius: 14px;
-    width: 367px;
-    height: 201px;
-     display: flex;
-    flex-direction: column;
-    justify-content: center;
-     align-items: center;
-}
-.deal_item1, .deal_item2, .deal_item3{
-    background-position: cover;
-   }
-.deal_item1, .deal_item2 h5{
-    font-size: 20px;
-    font-weight:bold ;
-      color: #fffffff6;
-}
-.deal_item1 p a{
-     font-size: 16px;
-    font-weight: 600;
-    color: #fffffff6;
-    
-}
- .deal_item2 p a{
-    font-size: 16px;
-    font-weight: 600;
-    color: #fffffff6;
-}
-.deal_item3{
-    background-image: url(./assets/deal-zabo.png);
-    border-radius: 22px;
-    width: 753px;
-    height: 425px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-     align-items: center;
-     }
-
-
-.deal_item3 h5{
-    font-size: 40px;
-    font-weight: bold;
-    color: #fffffff6;
-}
-.deal_item3 p a{
-font-size: 28px;
-font-weight: 600;
- color: aliceblue;
-   text-align: center;
-}
-
-.deal_grid{
     display: flex;
     gap: 28px;
+    margin: 0 auto;
 }
-.join{
-    /* border: 2px solid red; */
+.deal_item1,
+.deal_item2,
+.deal_item3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.deal_item1 {
+    background-image: url(./assets/deal-bloom.png);
+    width: 367px;
+    height: 201px;
+    border-radius: 14px;
+}
+.deal_item2 {
+    background-image: url(./assets/deal-ana.png);
+    width: 367px;
+    height: 201px;
+    border-radius: 14px;
+}
+.deal_item3 {
+    background-image: url(./assets/deal-zabo.png);
+    width: 753px;
+    height: 425px;
+    border-radius: 22px;
+}
+.deal_item1 h5,
+.deal_item2 h5,
+.deal_item3 h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.deal_item1 p a,
+.deal_item2 p a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.deal_item3 h5 {
+    font-size: 40px;
+}
+.deal_item3 p a {
+    font-size: 28px;
+    font-weight: 600;
+    color: aliceblue;
+    text-align: center;
+}
+
+/* === Join Section === */
+.join {
     width: 100%;
     height: 533px;
     background-image: url(./assets/news-letter-bg.png);
+    background-size: cover;
+    background-position: center;
     margin-top: 200px;
-    background-position: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.join h2{
+.join h2 {
     font-size: 50px;
     font-weight: bold;
-    color:white;
+    color: white;
 }
- input{
+input {
     height: 50px;
     width: 830px;
     border: none;
- }
- .input button{
-     height: 51px;
+    padding: 0 10px;
+}
+.input button {
+    height: 51px;
     width: 186px;
- }
- footer{
+}
+
+/* === Footer Section === */
+footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 348px;
- }
+    padding-top: 50px;
+}
+.div1 {
+    width: 359px;
+    height: 179px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.55);
+}
+.div2 {
+    display: flex;
+    gap: 50px;
+}
+.div2 ul li {
+    list-style: none;
+    margin-bottom: 15px;
+    color: #00000070;
+}
+.div3 {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 220px;
+    margin: 20px 0;
+}
+
+
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    height: auto;
+    padding: 10px;
+    max-width: 100%;
+  }
+  header nav {
+    flex-direction:flex;
+    align-items: center;
+    gap: 10px;
+  }
+  nav ul li {
+    display: none;
+    
+  }
+  nav ul li:last-child{
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    height: 50px;
+  }
+
+  .hero {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+    padding: 0 15px;
+    text-align: center;
+  }
+  .hero_details,
+  .banner_pic {
+    width: 100%;
+  }
+  .hero_title {
+    font-size: 40px;
+  }
+  .hero_description {
+    font-size: 18px;
+  }
+
+  .our_plants {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .our_plants h2 {
+    font-size: 32px;
+  }
+  .plant_des {
+    font-size: 16px;
+  }
+  .cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .plants_lover {
+    flex-direction: column;
+    width: 100%;
+    margin: 100px 0;
+    padding: 0 15px;
+    gap: 30px;
+  }
+  .plants_lover_img,
+  .lover_des {
+    width: 100%;
+  }
+  .badge {
+    display: none;
+  }
+  .lover_des h3 {
+    font-size: 30px;
+  }
+  .lover_list li {
+    font-size: 16px;
+  }
+
+  .deals {
+    padding: 0 15px;
+  }
+  .deal_title {
+    font-size: 32px;
+  }
+  .deal_des {
+    font-size: 16px;
+  }
+  .deal_grid {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+  .deal_item1,
+  .deal_item2,
+  .deal_item3 {
+    width: 100%;
+    height: 180px;
+  }
+  .deal_item3 h5 {
+    font-size: 28px;
+  }
+  .deal_item3 p a {
+    font-size: 20px;
+  }
+
+  .join {
+    padding: 0 15px;
+    height: auto;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .join h2 {
+    font-size: 28px;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+  .input button {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+  .div1, .div2, .div3 {
+    width: 100%;
+  }
+  .div2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .div2 ul {
+    padding: 0;
+  }
+  .div3 {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
