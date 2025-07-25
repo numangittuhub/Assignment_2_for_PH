@@ -1,4 +1,7 @@
 /* === Header Section === */
+*{
+  font-family: sans-serif;
+}
 header {
     height: 71px;
     max-width: 1140px;
@@ -205,6 +208,7 @@ span {
     width: 753px;
     height: 425px;
     border-radius: 22px;
+    /* filter: sepia(34%); */
 }
 .deal_item1 h5,
 .deal_item2 h5,
@@ -227,9 +231,59 @@ span {
     font-weight: 600;
     color: aliceblue;
     text-align: center;
+    
+}
+/* overlay */
+.card_o1{
+  width: 367px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15PX;
+    margin-bottom: 20px;
+  }
+  .card_o1 img{
+    width:367px ;
+    display: block;
+    border-radius: 15px;
+  }
+  .card_o1 .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(22, 5, 5, 0.596);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .card_o1 .overlay h3{
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+   .card_o1 .overlay a{
+    font-size: 22px;
+    color: white;
+   }
+   
+   .overlay_container{
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+   }
+.column-1{
+  width: 753px;
+  margin-left: 20px;
+}
+.column-1 img{
+  width: 100%;
 }
 
-/* === Join Section === */
+
 .join {
     width: 100%;
     height: 533px;
@@ -311,7 +365,7 @@ footer {
     text-align: left;
 }
 
-.logo-text {
+/* .logo-text {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
@@ -323,7 +377,7 @@ footer {
     font-size: 14px;
     color: #666;
     font-style: italic;
-}
+} */
 
 /* .footer-logo p {
     font-size: 14px;
@@ -364,10 +418,12 @@ footer {
     height: 30px;
 }
 
+
 @media screen and (max-width: 576px) {
   
  *{
    box-sizing: border-box;
+   overflow-x: hidden;
  }
   header {
     height: auto;
@@ -482,6 +538,42 @@ footer {
   .deal_item3 p a {
     font-size: 20px;
   }
+
+  /* deals overlay styles */
+  .card_o{
+    position: relative;
+    overflow: hidden;
+    border-radius: 15PX;
+    margin-bottom: 20px;
+  }
+  .card_o img{
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+  }
+  .card_o .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(22, 5, 5, 0.596);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .card_o .overlay h3{
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+   .card_o .overlay a{
+    font-size: 22px;
+    color: white;
+   }
 
   .join {
     padding: 0 auto;
