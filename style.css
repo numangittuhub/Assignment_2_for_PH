@@ -646,14 +646,14 @@ footer {
 }
 
 /* Overlay heading */
-.card_o .overlay h3 {
+.card_o ,#last .overlay h3 {
   font-size: 24px;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 /* Overlay button/link */
-.card_o .overlay a {
+.card_o , #last .overlay a {
   font-size: 18px;
   color: white;
   text-decoration: underline;
@@ -667,6 +667,16 @@ footer {
     /* flex-direction: column;
     gap: 10px; */
     width: 218px;
+  }
+  #last{
+   width: 100%;
+  }
+  #last h3{
+    font-size: 20px;
+  }
+  #last img{
+    width: 100%;
+
   }
   input {
     width: 100%;
