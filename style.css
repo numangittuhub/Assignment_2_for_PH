@@ -80,7 +80,7 @@ span {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     width: 1140px;
-    margin: 10px auto;
+    margin: 10px 0;
 }
 .card {
     width: 240px;
@@ -325,12 +325,12 @@ footer {
     font-style: italic;
 }
 
-.footer-logo p {
+/* .footer-logo p {
     font-size: 14px;
     color: #333;
     max-width: 200px;
     margin-top: 10px;
-}
+} */
 
 .footer-links {
     display: flex;
@@ -348,7 +348,7 @@ footer {
     text-decoration: none;
     color: #666;
     font-size: 17px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .column a:hover {
@@ -396,13 +396,13 @@ footer {
     width: 100%;
     height: auto;
     margin: 50px 0;
-    padding: 0 15px;
+    padding:15px 0;
     text-align: center;
   }
   .hero {
     text-align: left;
   }
-  .hero_details,
+    .hero_details,
   .banner_pic {
     width: 100%;
   }
