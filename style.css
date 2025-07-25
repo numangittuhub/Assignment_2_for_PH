@@ -162,7 +162,7 @@ span {
     text-align: center;
 }
 
-}
+
 .deal_title {
     font-size: 50px;
     font-weight: bold;
@@ -241,6 +241,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .join h2 {
     font-size: 50px;
@@ -263,9 +264,9 @@ input {
 }
 
 /* === Footer Section === */
-footer {
+/* footer {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; 
     height: 348px;
     padding-top: 50px;
 }
@@ -290,12 +291,84 @@ footer {
     height: 40px;
     width: 220px;
     margin: 20px 0;
+} */
+footer {
+   height: 300px;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.logo-text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #e63946;
+    font-family: 'Georgia', serif;
+}
+
+.sub-text {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #333;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.column {
+    text-align: left;
+   font-size: 25px;
 }
 
 
-@media (max-width: 576px) {
-  
+.column a {
+    display: block;
+    text-decoration: none;
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
 
+.column a:hover {
+    color: #e63946;
+}
+
+.social-icons a {
+    margin-left: 30px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  
+ *{
+   box-sizing: border-box;
+ }
   header {
     height: auto;
     padding: 10px;
@@ -320,7 +393,7 @@ footer {
 
   .hero {
     flex-direction: column-reverse;
-    width: auto;
+    width: 100%;
     height: auto;
     margin: 50px 0;
     padding: 0 15px;
@@ -331,7 +404,7 @@ footer {
   }
   .hero_details,
   .banner_pic {
-    width: auto;
+    width: 100%;
   }
   .hero_title {
     font-size: 40px;
@@ -354,10 +427,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    width: auto;
+    width: 100%;
   }
   .card {
-    width: auto;
+    width: 100%;
     height: auto;
   }
 
@@ -365,7 +438,7 @@ footer {
     flex-direction: column;
     width: 100%;
     margin: 100px 0;
-    padding: 0 15px;
+    padding: 0 ;
     gap: 30px;
   }
   .plants_lover_img,
@@ -411,12 +484,13 @@ footer {
   }
 
   .join {
-    padding: 0 15px;
-    width:auto;
+    padding: 0 auto;
+    width:100%;
     height:275px;
     margin-top: 100px;
     text-align: center;
-  }
+    }
+
   .join h2 {
     font-size: 23px;
   }
@@ -433,7 +507,7 @@ footer {
     width: 100px;
   }
 
-  footer {
+  /* footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -443,10 +517,11 @@ footer {
   .div1, .div2, .div3 {
     width:auto;
     height: auto;
+    justify-content: start;
   }
   .div1 img{
-    height: 100px;
-    width: 50%;
+    height: 80px;
+    width: 30%;
   }
   .div1 , .div2{
     display: flex;
@@ -458,7 +533,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-items: left;
-    
+ }
   /* .div2 {
     flex-direction: column;
     align-items: center;
@@ -470,5 +545,27 @@ footer {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+  }*/
+  footer{
+    height: 100%;
   }
-} */
+.footer-content {
+        flex-direction: column;
+        text-align: center;
+    
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+   .column2{
+    margin-top: -50px;
+   }
+    .social-icons {
+        margin-top: 20px;
+        margin-left: -22px;
+    }
+
+} 
